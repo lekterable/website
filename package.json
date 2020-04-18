@@ -1,0 +1,47 @@
+{
+  "name": "lekterable.netlify.com",
+  "version": "1.0.0",
+  "author": "Kornel Dubieniecki <lekterable@gmail.com> (https://lekterable.netlify.com)",
+  "description": "My personal website",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop --host 0.0.0.0",
+    "start": "npm run dev",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lekterable/lekterable.netlify.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lekterable/lekterable.netlify.com/issues"
+  },
+  "keywords": [
+    "gatsby",
+    "personal",
+    "website",
+    "lekterable",
+    "Kornel",
+    "Dubieniecki"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.20.25",
+    "gatsby-image": "^2.3.4",
+    "gatsby-plugin-manifest": "^2.3.5",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-sharp": "^2.4.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4"
+  }
+}
