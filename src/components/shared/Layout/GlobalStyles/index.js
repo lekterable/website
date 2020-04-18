@@ -12,6 +12,7 @@ const GlobalStyles = () => (
       body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
         min-height: 100vh;
         min-height: -webkit-fill-available;
       }
@@ -28,6 +29,12 @@ const GlobalStyles = () => (
         color: inherit;
         text-decoration: none;
         border-bottom: 1px solid black;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
       }
     `}
   />

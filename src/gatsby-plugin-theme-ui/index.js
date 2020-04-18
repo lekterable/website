@@ -22,7 +22,7 @@ export default {
     link: '#07c',
     special: '#ff0',
     text: '#000',
-    muted: '#f6f6f6',
+    muted: '#808a9f',
     background: '#fff'
   },
   text: {
