@@ -6,6 +6,7 @@ import Nav from './Nav'
 const Header = () => (
   <header
     sx={{
+      height: ['60px', '90px', '100px'],
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
@@ -18,13 +19,11 @@ const Header = () => (
       sx={{
         pb: ['unset', 'unset', 2],
         lineHeight: 1,
-        borderBottomStyle: ['none', 'none', 'solid'],
+        borderBlockEndStyle: 'none',
         color: 'primary',
         fontSize: [4, 4, 5],
-        transition: 'border-color 0.3s, color 0.3s',
         ':hover': {
-          color: 'special',
-          borderBottomColor: 'special'
+          color: 'special'
         }
       }}
     >
