@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Link } from 'gatsby'
 import { jsx } from 'theme-ui'
+import Logo from './Logo'
 import Nav from './Nav'
 
 const Header = () => (
@@ -14,21 +14,7 @@ const Header = () => (
       py: [4, 5]
     }}
   >
-    <Link
-      to="/"
-      sx={{
-        pb: ['unset', 'unset', 2],
-        lineHeight: 1,
-        borderBlockEndStyle: 'none',
-        color: 'primary',
-        fontSize: [4, 4, 5],
-        ':hover': {
-          color: 'special'
-        }
-      }}
-    >
-      KD
-    </Link>
+    <Logo />
     <Nav />
   </header>
 )
