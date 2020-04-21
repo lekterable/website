@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 
 const Footer = () => (
   <footer sx={{ textAlign: 'center', py: 3 }}>
-    © {new Date().getFullYear()} Made with ❤️by{' '}
+    © {new Date().getFullYear()} Made with <span className="emoji">❤️</span>by{' '}
     <a
       href="https://www.github.com/lekterable"
       sx={{

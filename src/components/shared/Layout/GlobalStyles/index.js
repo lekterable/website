@@ -36,6 +36,17 @@ const GlobalStyles = () => (
         margin: 0;
         list-style: none;
       }
+
+      @media not screen and (-webkit-min-device-pixel-ratio: 2),
+        not screen and (min--moz-device-pixel-ratio: 2),
+        not screen and (-o-min-device-pixel-ratio: 2/1),
+        not screen and (min-device-pixel-ratio: 2),
+        not screen and (min-resolution: 192dpi),
+        not screen and (min-resolution: 2dppx) {
+        .emoji {
+          margin-right: 5px;
+        }
+      }
     `}
   />
 )
