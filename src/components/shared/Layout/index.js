@@ -11,10 +11,7 @@ const Layout = ({ children }) => (
     <Header />
     <main
       sx={{
-        margin: '0 auto',
-        maxWidth: 960,
-        width: '100%',
-        flex: 1
+        width: '100%'
       }}
     >
       {children}
