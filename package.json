@@ -36,7 +36,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-sharp": "^2.4.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
