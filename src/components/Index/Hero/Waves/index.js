@@ -11,15 +11,23 @@ import WhiteWave from '../../../../assets/white-wave.svg'
 
 const Waves = () => {
   const { scrollY } = useViewportScroll()
+  const hasWindow = typeof window !== 'undefined'
+
   const x1 = useTransform(
     scrollY,
-    [0, window.innerHeight],
-    [-window.innerHeight, -window.innerWidth * 4]
+    [0, hasWindow ? window.innerHeight : 0],
+    [
+      hasWindow ? -window.innerHeight : 0,
+      hasWindow ? -window.innerWidth * 4 : 0
+    ]
   )
   const x2 = useTransform(
     scrollY,
-    [0, window.innerHeight],
-    [-window.innerWidth * 4, -window.innerHeight]
+    [0, hasWindow ? window.innerHeight : 0],
+    [
+      hasWindow ? -window.innerWidth * 4 : 0,
+      hasWindow ? -window.innerHeight : 0
+    ]
   )
 
   return (
