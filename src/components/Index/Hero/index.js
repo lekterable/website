@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import Message from './Message'
 import Waves from './Waves'
 
 const Hero = () => (
@@ -10,10 +11,10 @@ const Hero = () => (
         'calc(100vh - 90px)',
         'calc(100vh - 100px)'
       ],
-      overflowX: 'hidden',
       width: '100%'
     }}
   >
+    <Message />
     <Waves />
   </div>
 )

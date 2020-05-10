@@ -34,16 +34,16 @@ const Waves = () => {
     <div
       sx={{
         pointerEvents: 'none',
-        position: 'relative',
-        height: '-webkit-fill-available',
-        width: '100%'
+        width: '100%',
+        height: 350,
+        position: 'absolute',
+        bottom: 0,
+        overflowX: 'hidden'
       }}
     >
       <motion.div
         style={{
-          height: '350px',
           position: 'absolute',
-          bottom: 0,
           x: useSpring(x1, { stiffness: 150, damping: 10 })
         }}
       >
@@ -62,9 +62,7 @@ const Waves = () => {
       </motion.div>
       <motion.div
         style={{
-          height: '350px',
           position: 'absolute',
-          bottom: 0,
           x: useSpring(x2, { stiffness: 1000, damping: 50 })
         }}
       >
