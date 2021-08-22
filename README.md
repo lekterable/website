@@ -1,1 +1,1 @@
-# lekterable.netlify.com
+# lekterable

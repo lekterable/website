@@ -1,5 +1,5 @@
 {
-  "name": "lekterable.netlify.com",
+  "name": "lekterable",
   "version": "1.0.0",
   "description": "My personal website",
   "keywords": [
@@ -12,14 +12,14 @@
     "Dubieniecki"
   ],
   "bugs": {
-    "url": "https://github.com/lekterable/lekterable.netlify.com/issues"
+    "url": "https://github.com/lekterable/lekterable/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lekterable/lekterable.netlify.com"
+    "url": "https://github.com/lekterable/lekterable"
   },
   "license": "MIT",
-  "author": "Kornel Dubieniecki <lekterable@gmail.com> (https://lekterable.netlify.com)",
+  "author": "Kornel Dubieniecki <lekterable@gmail.com> (https://lekterable.vercel.app)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
