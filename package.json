@@ -1,50 +1,43 @@
 {
   "name": "lekterable.netlify.com",
   "version": "1.0.0",
-  "author": "Kornel Dubieniecki <lekterable@gmail.com> (https://lekterable.netlify.com)",
   "description": "My personal website",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop --host 0.0.0.0",
-    "start": "npm run dev",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lekterable/lekterable.netlify.com"
-  },
-  "bugs": {
-    "url": "https://github.com/lekterable/lekterable.netlify.com/issues"
-  },
   "keywords": [
-    "gatsby",
+    "next",
+    "next.js",
     "personal",
     "website",
     "lekterable",
     "Kornel",
     "Dubieniecki"
   ],
+  "bugs": {
+    "url": "https://github.com/lekterable/lekterable.netlify.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lekterable/lekterable.netlify.com"
+  },
   "license": "MIT",
+  "author": "Kornel Dubieniecki <lekterable@gmail.com> (https://lekterable.netlify.com)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "framer-motion": "^1.10.3",
-    "gatsby": "^2.20.25",
-    "gatsby-image": "^2.3.4",
-    "gatsby-plugin-manifest": "^2.4.1",
-    "gatsby-plugin-offline": "^3.2.0",
-    "gatsby-plugin-react-helmet": "^3.2.5",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-    "gatsby-plugin-react-svg": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.5.6",
-    "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-source-filesystem": "^2.2.5",
-    "gatsby-transformer-sharp": "^2.5.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
-    "theme-ui": "^0.3.1"
+    "@stitches/react": "0.2.5",
+    "framer-motion": "4.1.17",
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.0.4"
+    "@svgr/webpack": "5.5.0",
+    "@types/react": "17.0.19",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "typescript": "4.3.5"
   }
 }
