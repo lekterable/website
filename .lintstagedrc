@@ -1,0 +1,4 @@
+{
+  "*.{js,ts,tsx}": "npm run lint -- --cache",
+  "*.{js,json,ts,tsx,md}": "npm run format"
+}

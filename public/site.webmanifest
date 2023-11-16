@@ -1,0 +1,16 @@
+{
+  "background_color": "#000000",
+  "description": "Javascript passionate experienced in React, React Native and Node.js",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "any",
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "name": "Kornel Dubieniecki",
+  "short_name": "Kornel Dubieniecki",
+  "start_url": "/",
+  "theme_color": "#000000"
+}

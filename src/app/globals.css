@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+
+    --card: #ffffff;
+    --card-foreground: #000000;
+
+    --popover: #ffffff;
+    --popover-foreground: #000000;
+
+    --primary: #000000;
+    --primary-foreground: #ffffff;
+
+    --secondary: #ffffff;
+    --secondary-foreground: #000000;
+
+    --muted: #f6f6f6;
+    --muted-foreground: #adadad;
+
+    --accent: #f1cf5c;
+    --accent-foreground: #ffffff;
+
+    --destructive: #ff5757;
+    --destructive-foreground: #000000;
+
+    --border: #000000;
+    --input: #000000;
+    --ring: #000000;
+
+    --radius: 0.5rem;
+  }
+
+  /* .dark {
+    --background: #ffffff;
+    --foreground: #dedede;
+
+    --card: #ffffff;
+    --card-foreground: #dedede;
+
+    --popover: #ffffff;
+    --popover-foreground: #dedede;
+
+    --primary: #353535;
+    --primary-foreground: #353535;
+
+    --secondary: #f6f6f6;
+    --secondary-foreground: #dedede;
+
+    --muted: #f6f6f6;
+    --muted-foreground: #adadad;
+
+    --accent: #f6f6f6;
+    --accent-foreground: #dedede;
+
+    --destructive: #ff5757;
+    --destructive-foreground: #353535;
+
+    --border: #000000;
+    --input: #000000;
+    --ring: #dedede;
+
+    --radius: 0.5rem;
+  } */
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    @apply border-border;
+  }
+
+  html {
+    @apply font-sans antialiased;
+    /* scroll-behavior: smooth; */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
