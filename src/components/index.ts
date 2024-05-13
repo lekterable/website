@@ -1,4 +1,5 @@
 export * from './ui'
+export { default as Analytics } from './analytics'
 export { default as Link } from './link'
 export { default as MobileNav } from './mobile-nav'
 export { default as Nav } from './nav'

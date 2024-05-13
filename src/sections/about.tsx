@@ -63,7 +63,10 @@ const About = () => (
           <SeparatorRight className="mb-[21px] max-w-[322px] md:max-w-[377px]" />
           <div className="max-w-[377px] space-y-[18px] text-center text-[21px] font-bold tracking-wide md:max-w-[521px] md:text-[29px] lg:text-left">
             <p>
-              software engineer with <span className="text-accent">+5yrs</span>{' '}
+              software engineer with{' '}
+              <span className="text-accent">
+                +{new Date().getFullYear() - 2018}yrs
+              </span>{' '}
               of experience
             </p>
             <p>
@@ -104,8 +107,8 @@ const About = () => (
                   className="mt-[21px]"
                 />
               </div>
-              <p className="mt-[7px] text-[18px] leading-none">IBM</p>
-              <p className="mt-[3px] text-[21px] leading-none text-accent">
+              <p className="mt-[11px] text-[18px] leading-none">IBM</p>
+              <p className="mt-[7px] text-[21px] leading-none text-accent">
                 Full-Stack Developer
               </p>
             </div>
@@ -121,8 +124,8 @@ const About = () => (
                   className="mt-[21px]"
                 />
               </div>
-              <p className="mt-[7px] text-[18px] leading-none">STRV</p>
-              <p className="mt-[3px] text-[21px] leading-none text-accent">
+              <p className="mt-[11px] text-[18px] leading-none">STRV</p>
+              <p className="mt-[7px] text-[21px] leading-none text-accent">
                 Front-End Developer
               </p>
             </div>
@@ -138,8 +141,8 @@ const About = () => (
                   className="mt-[21px]"
                 />
               </div>
-              <p className="mt-[7px] text-[18px] leading-none">Outreach</p>
-              <p className="mt-[3px] text-[21px] leading-none text-accent">
+              <p className="mt-[11px] text-[18px] leading-none">Outreach</p>
+              <p className="mt-[7px] text-[21px] leading-none text-accent">
                 Software Engineer
               </p>
             </div>
@@ -155,8 +158,8 @@ const About = () => (
                   className="mt-[21px]"
                 />
               </div>
-              <p className="mt-[7px] text-[18px] leading-none">Macromo</p>
-              <p className="mt-[3px] text-[21px] leading-none text-accent">
+              <p className="mt-[11px] text-[18px] leading-none">Macromo</p>
+              <p className="mt-[7px] text-[21px] leading-none text-accent">
                 Technical Lead
               </p>
             </div>

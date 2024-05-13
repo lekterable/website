@@ -22,7 +22,10 @@ const Link = ({
 
   return (
     <LinkComponent
-      className={cn('cursor-pointer hover:text-accent', className)}
+      className={cn(
+        'cursor-pointer underline-offset-8 hover:text-accent hover:underline',
+        className,
+      )}
       duration={300}
       spy
       to={to}

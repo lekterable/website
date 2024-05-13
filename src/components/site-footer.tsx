@@ -1,18 +1,18 @@
 'use client'
 
-import { siteConfig } from '~config/site'
+import clientConfig from '~config/client'
 
 const SiteFooter = (): JSX.Element => (
-  <footer className="bg-primary py-[3px]">
-    <p className="text-center text-[18px] font-bold text-secondary">
-      © 2023 Made with ❤️ by{' '}
+  <footer className="bg-primary py-[7px] font-sans">
+    <p className="text-center text-sm text-secondary">
+      © {new Date().getFullYear()} Made with ❤️ by{' '}
       <a
-        href={siteConfig.links.github}
+        href={clientConfig.links.github}
         target="_blank"
         rel="noreferrer"
         className="font-medium underline underline-offset-2"
       >
-        {siteConfig.author}
+        {clientConfig.author}
       </a>
     </p>
   </footer>

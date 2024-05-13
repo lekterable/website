@@ -6,7 +6,7 @@ import Link from './link'
 import MobileNav from './mobile-nav'
 import Nav from './nav'
 import LogoIMG from '~assets/logo.png'
-import { siteConfig } from '~config/site'
+import clientConfig from '~config/client'
 // import ThemeToggle from './theme-toggle'
 
 const SiteHeader = (): JSX.Element => (
@@ -24,7 +24,7 @@ const SiteHeader = (): JSX.Element => (
               alt="KD logo"
             />
           </motion.div>
-          <span className="hidden font-bold">{siteConfig.name}</span>
+          <span className="hidden font-bold">{clientConfig.name}</span>
         </Link>
         <MobileNav />
       </div>

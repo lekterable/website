@@ -32,10 +32,8 @@ const Contact = () => {
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col space-y-[13px] sm:flex-row sm:space-x-[21px] sm:space-y-0">
-            <div className="flex-1">
-              <label className="mb-[3px]" htmlFor="name">
-                Name
-              </label>
+            <div className="flex flex-1 flex-col gap-[4px]">
+              <label htmlFor="name">Name</label>
               <Input
                 id="name"
                 type="text"
@@ -49,10 +47,8 @@ const Contact = () => {
                 errors={state.errors}
               />
             </div>
-            <div className="flex-1">
-              <label className="mb-[3px]" htmlFor="email">
-                Email
-              </label>
+            <div className="flex flex-1 flex-col gap-[4px]">
+              <label htmlFor="email">Email</label>
               <Input
                 id="email"
                 type="email"
@@ -67,10 +63,8 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="mt-[13px]">
-            <label htmlFor="message" className="mb-[3px]">
-              Message
-            </label>
+          <div className="mt-[13px] flex flex-col gap-[4px]">
+            <label htmlFor="message">Message</label>
             <Textarea
               id="message"
               name="message"

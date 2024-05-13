@@ -10,7 +10,7 @@ import Link from './link'
 import Nav from './nav'
 import LogoIMG from '~assets/logo.png'
 import { Button } from '~components/ui/button'
-import { siteConfig } from '~config/site'
+import clientConfig from '~config/client'
 
 const MobileNav = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,7 +61,7 @@ const MobileNav = (): JSX.Element => {
                 alt="KD logo"
               />
             </motion.div>
-            <span className="hidden font-bold">{siteConfig.name}</span>
+            <span className="hidden font-bold">{clientConfig.name}</span>
           </Link>
           <button
             type="button"

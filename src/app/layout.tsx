@@ -1,59 +1,44 @@
 /* eslint-disable @next/next/no-page-custom-font */
 
 import './globals.css'
-import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
-import { SiteFooter, SiteHeader, ThemeProvider } from '~components'
-import { siteConfig } from '~config/site'
+import { Analytics, SiteFooter, SiteHeader, ThemeProvider } from '~components'
+import clientConfig from '~config/client'
 
 export const metadata: Metadata = {
   authors: [
     {
-      name: siteConfig.author,
-      url: siteConfig.links.github,
+      name: clientConfig.author,
+      url: clientConfig.links.github,
     },
   ],
-  creator: siteConfig.author,
-  description: siteConfig.description,
-  icons: {
-    apple: '/apple-touch-icon.png',
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-  },
-  keywords: ['Linky', 'LinkedIn', 'Helper', 'Post', 'Tool'],
+  creator: clientConfig.author,
+  description: clientConfig.description,
+  keywords: clientConfig.keywords,
   manifest: '/site.webmanifest',
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(clientConfig.url),
   openGraph: {
-    description: siteConfig.description,
-    images: [
-      {
-        alt: siteConfig.name,
-        height: 630,
-        url: siteConfig.ogImage,
-        width: 1200,
-      },
-    ],
+    description: clientConfig.description,
     locale: 'en_US',
-    siteName: siteConfig.name,
-    title: siteConfig.name,
+    siteName: clientConfig.name,
+    title: clientConfig.name,
     type: 'website',
-    url: siteConfig.url,
   },
   themeColor: [
     { color: 'white', media: '(prefers-color-scheme: light)' },
     { color: 'black', media: '(prefers-color-scheme: dark)' },
   ],
   title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    default: clientConfig.name,
+    template: `%s | ${clientConfig.name}`,
   },
   twitter: {
     card: 'summary_large_image',
-    creator: `@${siteConfig.author}`,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-    title: siteConfig.name,
+    creator: `@${clientConfig.author}`,
+    description: clientConfig.description,
+    images: [clientConfig.ogImage],
+    title: clientConfig.name,
   },
 }
 
@@ -86,7 +71,7 @@ const RootLayout = ({ children }: Props): JSX.Element => (
           <SiteFooter />
         </div>
       </ThemeProvider>
-      <Analytics />
+      {clientConfig.env === 'production' && <Analytics />}
     </body>
   </html>
 )
