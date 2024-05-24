@@ -12,7 +12,7 @@ const Contact = () => {
         <h1 className="font-['Akronim'] text-[55px] leading-none md:text-[89px]">
           Contact Me
         </h1>
-        <SeparatorBoth width={189} />
+        <SeparatorBoth className="w-[189px] text-accent" />
         <div className="mt-[13px] flex flex-col items-center text-[28px] font-bold xs:text-[28px] md:text-[47px]">
           {state.succeeded ? (
             <h2 className="text-[34px] text-accent md:text-[55px]">
@@ -32,7 +32,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col space-y-[13px] sm:flex-row sm:space-x-[21px] sm:space-y-0">
-            <div className="flex flex-1 flex-col gap-[4px]">
+            <div className="flex flex-1 flex-col gap-[3px]">
               <label htmlFor="name">Name</label>
               <Input
                 id="name"
@@ -47,7 +47,7 @@ const Contact = () => {
                 errors={state.errors}
               />
             </div>
-            <div className="flex flex-1 flex-col gap-[4px]">
+            <div className="flex flex-1 flex-col gap-[3px]">
               <label htmlFor="email">Email</label>
               <Input
                 id="email"
@@ -63,7 +63,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="mt-[13px] flex flex-col gap-[4px]">
+          <div className="mt-[13px] flex flex-col gap-[3px]">
             <label htmlFor="message">Message</label>
             <Textarea
               id="message"

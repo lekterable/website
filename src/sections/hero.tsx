@@ -11,26 +11,25 @@ const Hero = () => (
     className="min-h-safe flex flex-1 flex-col justify-between"
   >
     <div className="mt-[89px] flex flex-1 px-[21px] sm:px-[47px] md:px-[55px] lg:px-[123px] xl:px-[144px]">
-      <div className="relative mx-auto flex max-w-[322px] flex-1 flex-col justify-center text-[34px] leading-none tracking-wider xs:max-w-[377px] xs:text-[47px] sm:max-w-[521px] sm:text-[55px] md:max-w-[610px] md:text-[76px] lg:max-w-[843px] lg:text-[89px] xl:max-w-[1364px] xl:text-[123px] 2xl:text-[144px]">
-        <div className="flex flex-row-reverse flex-wrap items-end justify-end">
-          <div className="mx-auto mb-[13px] flex select-none justify-center px-[55px]">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Image
-                src={HeroIMG}
-                className="pointer-events-none h-[233px] w-auto md:h-[322px] xl:h-[377px]"
-                alt="hero image"
-              />
-            </motion.div>
-          </div>
+      <div className="mx-auto flex max-w-[322px] flex-1 flex-col justify-center 2xs:max-w-[377px] sm:max-w-[521px] md:max-w-[610px] lg:max-w-[843px] xl:max-w-[1364px]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto select-none"
+        >
+          <Image
+            src={HeroIMG}
+            className="max-h-[233px] w-auto md:max-h-[322px] lg:max-h-[377px]"
+            alt="hero image"
+          />
+        </motion.div>
+        <div className="mt-[18px] text-[34px] leading-none tracking-wider 2xs:text-[47px] sm:text-[55px] md:text-[76px] lg:text-[89px] xl:text-[123px] 2xl:text-[144px]">
           <h1>Looking for a dev?</h1>
+          <h1 className="mt-[18px] text-right font-bold">
+            You&apos;ve found one!
+          </h1>
         </div>
-        <h1 className="mt-[18px] text-right font-bold">
-          You&apos;ve found one!
-        </h1>
       </div>
     </div>
     <Waves />

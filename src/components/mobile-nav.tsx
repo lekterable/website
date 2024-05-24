@@ -24,7 +24,7 @@ const MobileNav = (): JSX.Element => {
         size="icon"
         variant="ghost"
         onClick={onOpen}
-        className="text-base hover:bg-gray-200 hover:text-gray-900 focus-visible:bg-gray-200 focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+        className="w-[47px] border border-gray-300 text-base hover:bg-gray-200 hover:text-gray-900 focus-visible:bg-gray-200 focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
       >
         <HamburgerMenuIcon className="h-[21px] w-[21px]" />
         <span className="sr-only">Toggle Menu</span>

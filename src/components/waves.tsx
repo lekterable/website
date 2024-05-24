@@ -18,7 +18,7 @@ const Wave = ({ variant }: { variant: 'black' | 'white' }) => {
   return (
     <Component
       className={cn(
-        'h-[300px] w-[600vh]',
+        'h-[233px] w-[521vh]',
         variant === 'white' && 'hover:[&_path]:fill-accent',
         variant === 'black' && '[&_path]:pointer-events-auto',
       )}
@@ -50,21 +50,20 @@ const Waves = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      className={cn('relative mt-[-1px] h-[233px] overflow-hidden', className)}
     >
-      <div className={cn('relative h-[300px] overflow-hidden', className)}>
-        <motion.div
-          animate={{ x: [-2000, 0, -2000] }}
-          transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
-          style={{ position: 'absolute', willChange }}
-        >
-          <Wave variant="white" />
-        </motion.div>
-        <motion.div
-          style={{ pointerEvents: 'none', position: 'absolute', willChange, x }}
-        >
-          <Wave variant="black" />
-        </motion.div>
-      </div>
+      <motion.div
+        animate={{ x: [-2000, 0, -2000] }}
+        transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
+        style={{ position: 'absolute', willChange }}
+      >
+        <Wave variant="white" />
+      </motion.div>
+      <motion.div
+        style={{ pointerEvents: 'none', position: 'absolute', willChange, x }}
+      >
+        <Wave variant="black" />
+      </motion.div>
     </motion.div>
   )
 }

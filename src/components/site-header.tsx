@@ -10,7 +10,7 @@ import clientConfig from '~config/client'
 // import ThemeToggle from './theme-toggle'
 
 const SiteHeader = (): JSX.Element => (
-  <header className="fixed z-10 w-full bg-secondary p-[13px] shadow-md sm:p-[21px] md:absolute md:p-[28px] md:shadow-none">
+  <header className="fixed z-10 w-full bg-secondary p-[13px] shadow-md md:absolute md:p-[21px] md:shadow-none">
     <div className="flex items-center">
       <div className="flex flex-1 flex-row items-center justify-between">
         <Link

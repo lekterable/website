@@ -3,13 +3,17 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import AboutIMG from '~assets/about.png'
+import Github from '~assets/github.svg'
 import IBM_IMG from '~assets/ibm.png'
+import LinkedIn from '~assets/linkedin.svg'
 import MacromoIMG from '~assets/macromo.jpeg'
 import OutreachIMG from '~assets/outreach.jpeg'
 import SeparatorRight from '~assets/separator-right.svg'
 import STRV_IMG from '~assets/strv.png'
 import TimelineDot from '~assets/timeline-dot.svg'
 import Timeline from '~assets/timeline.svg'
+import Youtube from '~assets/youtube.svg'
+import clientConfig from '~config/client'
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,7 +34,7 @@ const item = {
 const About = () => (
   <section
     id="about"
-    className="bg-[#000000] px-[34px] py-[89px] text-[#ffffff] xs:px-[55px] md:p-[89px] xl:p-[144px]"
+    className="bg-primary px-[34px] py-[89px] text-secondary xs:px-[55px] md:p-[89px] xl:p-[144px]"
   >
     <motion.div
       variants={container}
@@ -60,7 +64,30 @@ const About = () => (
           <h1 className="mb-[7px] text-center font-['Akronim'] text-[55px] leading-none md:text-[89px] lg:text-left">
             Kornel Dubieniecki
           </h1>
-          <SeparatorRight className="mb-[21px] max-w-[322px] md:max-w-[377px]" />
+          <SeparatorRight className="mb-[21px] max-w-[322px] text-accent md:max-w-[377px]" />
+          <div className="mb-[21px] flex items-center gap-[18px] md:gap-[21px]">
+            <a
+              href={clientConfig.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-[34px] hover:text-accent md:w-[47px]" />
+            </a>
+            <a
+              href={clientConfig.links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedIn className="w-[34px] hover:text-accent md:w-[47px]" />
+            </a>
+            <a
+              href={clientConfig.links.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Youtube className="w-[34px] hover:text-accent md:w-[47px]" />
+            </a>
+          </div>
           <div className="max-w-[377px] space-y-[18px] text-center text-[21px] font-bold tracking-wide md:max-w-[521px] md:text-[29px] lg:text-left">
             <p>
               software engineer with{' '}
@@ -93,12 +120,12 @@ const About = () => (
           variants={item}
           className="relative mt-[34px] hidden w-full text-[29px] 2xs:block lg:mt-[55px]"
         >
-          <Timeline className="absolute top-[55px] h-[21px] w-full" />
+          <Timeline className="absolute top-[55px] h-[21px] w-full text-accent" />
           <div className="flex justify-between space-x-[13px] font-bold">
             <div>
               <div className="inline-flex flex-col items-center">
                 <p className="text-[21px] leading-none">2018</p>
-                <TimelineDot className="mt-[21px] h-[18px]" />
+                <TimelineDot className="mt-[21px] h-[18px] text-accent" />
                 <Image
                   src={IBM_IMG}
                   alt="IBM logo"
@@ -115,7 +142,7 @@ const About = () => (
             <div>
               <div className="inline-flex flex-col items-center">
                 <p className="text-[21px] leading-none">2019</p>
-                <TimelineDot className="mt-[21px] h-[18px]" />
+                <TimelineDot className="mt-[21px] h-[18px] text-accent" />
                 <Image
                   src={STRV_IMG}
                   alt="STRV logo"
@@ -132,7 +159,7 @@ const About = () => (
             <div>
               <div className="inline-flex flex-col items-center">
                 <p className="text-[21px] leading-none">2021</p>
-                <TimelineDot className="mt-[21px] h-[18px]" />
+                <TimelineDot className="mt-[21px] h-[18px] text-accent" />
                 <Image
                   src={OutreachIMG}
                   alt="Outreach logo"
@@ -149,7 +176,7 @@ const About = () => (
             <div>
               <div className="inline-flex flex-col items-center">
                 <p className="text-[21px] leading-none">2023</p>
-                <TimelineDot className="mt-[21px] h-[18px]" />
+                <TimelineDot className="mt-[21px] h-[18px] text-accent" />
                 <Image
                   src={MacromoIMG}
                   alt="Macromo image"

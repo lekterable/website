@@ -20,6 +20,7 @@ const clientConfig = {
   links: {
     github: 'https://github.com/lekterable',
     linkedin: 'https://www.linkedin.com/in/lekterable',
+    youtube: 'https://www.youtube.com/@KornelDubieniecki',
   },
   name: 'Kornel Dubieniecki',
   ogImage: '/og.jpg',
