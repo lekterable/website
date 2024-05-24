@@ -70,6 +70,7 @@ const config: Config = {
         xs: '475px',
         ...theme.screens,
         '2xl': '1400px',
+        '3xl': '1792px',
       },
     },
   },
