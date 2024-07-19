@@ -4,6 +4,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 import { Analytics, SiteFooter, SiteHeader, ThemeProvider } from '~components'
+import fonts from './fonts'
 import clientConfig from '~config/client'
 
 export const metadata: Metadata = {
@@ -25,12 +26,8 @@ export const metadata: Metadata = {
     title: clientConfig.name,
     type: 'website',
   },
-  themeColor: [
-    { color: 'white', media: '(prefers-color-scheme: light)' },
-    { color: 'black', media: '(prefers-color-scheme: dark)' },
-  ],
   title: {
-    default: clientConfig.name,
+    default: `${clientConfig.name} | ${clientConfig.description}`,
     template: `%s | ${clientConfig.name}`,
   },
   twitter: {
@@ -40,25 +37,14 @@ export const metadata: Metadata = {
     images: [clientConfig.ogImage],
     title: clientConfig.name,
   },
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 type Props = PropsWithChildren<unknown>
 
 const RootLayout = ({ children }: Props): JSX.Element => (
   <html lang="en" suppressHydrationWarning>
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Akronim&family=Amatic+SC:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-    </head>
-    <body
-      className={
-        "bg-background font-['Amatic_SC'] text-[18px] antialiased md:text-[21px] lg:text-[29px]"
-      }
-    >
+    <body className={fonts}>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -67,7 +53,7 @@ const RootLayout = ({ children }: Props): JSX.Element => (
       >
         <div className="relative flex flex-col">
           <SiteHeader />
-          {children}
+          <main>{children}</main>
           <SiteFooter />
         </div>
       </ThemeProvider>

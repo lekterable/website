@@ -24,7 +24,7 @@ const MobileNav = (): JSX.Element => {
         size="icon"
         variant="ghost"
         onClick={onOpen}
-        className="w-[47px] border border-gray-300 text-base hover:bg-gray-200 hover:text-gray-900 focus-visible:bg-gray-200 focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+        className="w-[47px] border text-foreground hover:bg-muted hover:text-primary focus-visible:bg-border focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
       >
         <HamburgerMenuIcon className="h-[21px] w-[21px]" />
         <span className="sr-only">Toggle Menu</span>
@@ -50,7 +50,7 @@ const MobileNav = (): JSX.Element => {
         tabIndex={-1}
       >
         <div className="flex items-start justify-between">
-          <Link to="/" onClick={onClose}>
+          <Link href="/" onClick={onClose}>
             <motion.div
               className="inline-flex"
               whileHover={{ rotate: 13, scale: 1.2 }}
@@ -68,7 +68,7 @@ const MobileNav = (): JSX.Element => {
             data-drawer-hide="drawer-navigation"
             aria-controls="drawer-navigation"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
+            className="rounded-lg p-1.5 text-sm text-foreground hover:bg-muted hover:text-primary"
           >
             <X className="h-[21px] w-[21px]" />
             <span className="sr-only">Close menu</span>
@@ -76,7 +76,7 @@ const MobileNav = (): JSX.Element => {
         </div>
         <Nav
           onLink={onClose}
-          className="flex flex-1 flex-col items-center justify-end space-y-[18px] pt-[89px] text-[47px] font-bold"
+          className="flex flex-1 flex-col items-center justify-end space-y-[18px] pt-[89px] text-[34px]"
         />
         {/* <ThemeToggle /> */}
       </aside>

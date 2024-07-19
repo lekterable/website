@@ -3,7 +3,7 @@
 import clientConfig from '~config/client'
 
 const SiteFooter = (): JSX.Element => (
-  <footer className="bg-primary py-[7px] font-sans">
+  <footer className="bg-primary py-[7px]">
     <p className="text-center text-sm text-secondary">
       © {new Date().getFullYear()} Made with ❤️ by{' '}
       <a

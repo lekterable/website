@@ -1,18 +1,20 @@
 'use client'
 
+import type { LinkProps as NextLinkProps } from 'next/link'
+import NextLink from 'next/link'
 import { useRouter } from 'next/navigation'
-import type { LinkProps } from 'react-scroll'
-import { Link as LinkComponent } from 'react-scroll'
+import type { LinkProps as ScrollLinkProps } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 import { cn } from '~utils'
 
 type Props = {
-  to: string
+  href: string
   children: React.ReactNode
   className?: string
-} & Omit<LinkProps, 'ref'>
+} & Omit<ScrollLinkProps, 'ref' | 'to'>
 
 const Link = ({
-  to,
+  href,
   onClick,
   className,
   children,
@@ -20,26 +22,44 @@ const Link = ({
 }: Props): JSX.Element => {
   const router = useRouter()
 
+  const isHashLink = href.startsWith('#')
+
+  if (isHashLink) {
+    const hash = href.replace(/^\/?#/, '')
+
+    return (
+      <ScrollLink
+        className={cn(
+          'cursor-pointer text-primary underline-offset-8 hover:text-accent hover:underline',
+          className,
+        )}
+        duration={300}
+        spy
+        to={hash}
+        smooth
+        onClick={onClick}
+        {...props}
+      >
+        {children}
+      </ScrollLink>
+    )
+  }
+
   return (
-    <LinkComponent
+    <NextLink
+      href={href}
       className={cn(
-        'cursor-pointer underline-offset-8 hover:text-accent hover:underline',
+        'cursor-pointer text-primary underline-offset-8 hover:text-accent hover:underline',
         className,
       )}
-      duration={300}
-      spy
-      to={to}
-      smooth
       onClick={() => {
-        // eslint-disable-next-line @typescript-eslint/no-base-to-string -- IDK
-        router.push(`#${to}`)
+        router.push(href)
         onClick?.()
       }}
-      // prefetch
-      {...props}
+      {...(props as Omit<NextLinkProps, 'href'>)}
     >
       {children}
-    </LinkComponent>
+    </NextLink>
   )
 }
 

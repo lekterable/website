@@ -1,5 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable sort-keys */
+
 import type { Config } from 'tailwindcss'
-import theme from 'tailwindcss/defaultConfig'
+import { theme } from 'tailwindcss/defaultConfig'
 
 const config: Config = {
   content: [
@@ -8,7 +12,7 @@ const config: Config = {
     './src/**/*.{ts,tsx}',
   ],
   darkMode: ['class'],
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
   theme: {
     extend: {
       colors: {
@@ -54,6 +58,11 @@ const config: Config = {
           DEFAULT: 'var(--secondary)',
           foreground: 'var(--secondary-foreground)',
         },
+      },
+      fontFamily: {
+        heading: ['var(--font-amatic-sc)'],
+        mono: ['var(--font-chivo-mono)', ...theme.fontFamily.mono],
+        sans: ['var(--font-josefin-sans)', ...theme.fontFamily.sans],
       },
       keyframes: {
         'accordion-down': {

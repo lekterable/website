@@ -15,7 +15,10 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
-    "paths": { "~*": ["src/*"] }
+    "paths": {
+      "#*": ["src/modules/*"],
+      "~*": ["src/*"]
+    }
   },
   "include": [
     "next.config.js",

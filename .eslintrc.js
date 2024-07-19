@@ -26,6 +26,7 @@ module.exports = {
       { prefer: 'type-imports' },
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/no-confusing-void-expression': [
       'error',
       { ignoreArrowShorthand: true },
