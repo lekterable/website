@@ -12,7 +12,7 @@ const Post = async ({ params }: { params: { slug: string } }) => {
   const post = await getPost(params.slug)
 
   return (
-    <section className="bg-background px-8  pb-24">
+    <section className="bg-background px-8 pb-24">
       <div className="mx-auto max-w-screen-md">
         <PostTemplate post={post} />
         <Newsletter className="mt-16 md:mt-20" />

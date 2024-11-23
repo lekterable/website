@@ -72,8 +72,8 @@ const CircleList = ({ items }: Props) => {
                   }}
                   className="absolute -top-10 z-50 flex flex-col items-center justify-center rounded-md bg-primary px-4 py-2 text-xs shadow-xl"
                 >
-                  <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] " />
-                  <div className="absolute -bottom-px left-10 z-30 h-px w-[40%] " />
+                  <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%]" />
+                  <div className="absolute -bottom-px left-10 z-30 h-px w-[40%]" />
                   <div className="relative z-30 text-base font-bold text-secondary">
                     {title}
                   </div>

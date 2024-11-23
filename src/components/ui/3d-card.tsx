@@ -60,7 +60,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            'relative transition-all duration-200 ease-linear [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]',
+            'relative transition-all duration-200 ease-linear [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]',
             className,
           )}
         >

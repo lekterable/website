@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['demo.ghost.io', 'static.ghost.org', 'www.gravatar.com'],
   },
+  reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
       resourceQuery: /url/, // *.svg?url -- for importing SVGs as URLs
