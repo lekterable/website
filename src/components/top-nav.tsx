@@ -41,7 +41,7 @@ const TopNav = (): JSX.Element => {
     >
       <div className="mx-auto flex max-w-screen-3xl items-center">
         <div className="flex flex-1 flex-row items-center justify-between">
-          <Brand />
+          <Brand className="h-[47px] w-[47px] md:h-[55px] md:w-[55px]" />
           <MobileNav />
         </div>
         <Nav className="hidden flex-1 items-center justify-end space-x-[34px] text-xl md:flex" />

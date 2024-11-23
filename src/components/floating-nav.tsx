@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '~utils'
-import Logo from './logo'
+import Brand from './brand'
 import Nav from './nav'
 import useScrollStatus from '~hooks/use-scroll-status'
 
@@ -36,13 +36,13 @@ const FloatingNav = () => {
     <motion.div
       ref={navRef}
       className={cn(
-        'fixed left-1/2 top-10 z-20 hidden w-max -translate-x-1/2 transform gap-10 rounded-full border bg-background px-5 py-3 shadow-lg transition-all duration-300 md:flex',
+        'fixed left-1/2 top-10 z-20 hidden w-max -translate-x-1/2 transform gap-6 rounded-full border bg-background px-5 py-3 shadow-lg transition-all duration-300 md:flex',
         isVisible ? 'opacity-100' : 'opacity-0 md:hidden',
       )}
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
     >
-      <Logo className="h-[34px] w-[34px]" />
+      <Brand className="h-[34px] w-[34px]" />
       <Nav className="mt-0.5 flex select-none items-center justify-center gap-6 text-base" />
     </motion.div>
   )

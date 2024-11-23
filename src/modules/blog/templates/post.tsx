@@ -73,7 +73,7 @@ const Post = async ({ post }: Props) => {
                 src={primary_author.profile_image ?? ''}
                 alt={primary_author.name ?? ''}
               />
-              <p className="mt-1.5">{primary_author.name}</p>
+              <p>{primary_author.name}</p>
             </div>
           )}
 

@@ -1,24 +1,34 @@
 'use client'
 
 import type { PostsOrPages } from '@tryghost/content-api'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { getPosts } from '#blog/actions'
 import Newsletter from '#blog/components/newsletter'
 import PostCard from '#blog/components/post-card'
 import SeparatorBoth from '~assets/separator-both.svg'
 
+const useFocusEffect = (callback: () => void) => {
+  useEffect(() => {
+    window.addEventListener('focus', callback)
+
+    return () => window.removeEventListener('focus', callback)
+  }, [callback])
+}
+
 const Blog = () => {
   const [posts, setPosts] = useState<PostsOrPages>()
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const featured = await getPosts({ limit: 4 })
+  const fetchPosts = useCallback(async () => {
+    const featured = await getPosts({ limit: 4 })
 
-      setPosts(featured)
-    }
-
-    void fetchPosts()
+    setPosts(featured)
   }, [])
+
+  useEffect(() => {
+    void fetchPosts()
+  }, [fetchPosts])
+
+  useFocusEffect(fetchPosts)
 
   return (
     <section
