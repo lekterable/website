@@ -1,7 +1,6 @@
 const clientConfig = {
   author: 'lekterable',
-  description:
-    'Javascript passionate experienced in React, React Native and Node.js',
+  description: 'Tech leader and professional startup builder.',
   env: process.env.NODE_ENV,
   keywords: [
     'Kornel Dubieniecki',
