@@ -3,8 +3,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
-import { Analytics, SiteFooter, SiteHeader, ThemeProvider } from '~components'
+import { Analytics, SiteFooter, SiteHeader } from '~components'
 import fonts from './fonts'
+import Providers from './providers'
 import clientConfig from '~config/client'
 
 export const metadata: Metadata = {
@@ -45,18 +46,13 @@ type Props = PropsWithChildren<unknown>
 const RootLayout = ({ children }: Props): JSX.Element => (
   <html lang="en" suppressHydrationWarning>
     <body className={fonts}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
+      <Providers>
         <div className="relative flex flex-col">
           <SiteHeader />
           <main>{children}</main>
           <SiteFooter />
         </div>
-      </ThemeProvider>
+      </Providers>
       {clientConfig.env === 'production' && <Analytics />}
     </body>
   </html>
