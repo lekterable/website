@@ -7,6 +7,7 @@ import {
   useTransform,
   useWillChange,
 } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { cn } from '~utils'
 import WaveBlack from '~assets/wave-black.svg'
 import WaveWhite from '~assets/wave-white.svg'
@@ -32,7 +33,25 @@ type Props = {
   upsideDown?: boolean
 }
 
+const WavesStatic = ({ className, upsideDown }: Props) => (
+  <div
+    className={cn(
+      'relative h-[233px] overflow-hidden',
+      upsideDown === true ? 'mt-[-1px]' : 'mb-[-1px]', // Prevent gap between waves
+      className,
+    )}
+  >
+    <div style={{ position: 'absolute' }}>
+      <Wave variant="white" />
+    </div>
+    <div style={{ position: 'absolute' }}>
+      <Wave variant="black" />
+    </div>
+  </div>
+)
+
 const Waves = ({ className, upsideDown }: Props) => {
+  const [isMounted, setIsMounted] = useState(false)
   const willChange = useWillChange()
   const { scrollYProgress } = useScroll()
 
@@ -45,11 +64,16 @@ const Waves = ({ className, upsideDown }: Props) => {
     { damping: 50, stiffness: 1000 },
   )
 
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return <WavesStatic className={className} upsideDown={upsideDown} />
+  }
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <div
       className={cn(
         'relative h-[233px] overflow-hidden',
         upsideDown === true ? 'mt-[-1px]' : 'mb-[-1px]', // Prevent gap between waves
@@ -68,7 +92,7 @@ const Waves = ({ className, upsideDown }: Props) => {
       >
         <Wave variant="black" />
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 

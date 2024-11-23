@@ -1,3 +1,5 @@
+'use client'
+
 import { useForm } from '@formspree/react'
 import { Waves } from '~components'
 import ContactForm from './contact-form'

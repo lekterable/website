@@ -94,11 +94,11 @@ export type Technology = {
 
 const projects: Project[] = [
   {
-    description: `Influensea simplifies content creation process by leveraging AI in order to help users create compelling content. You can brainstorm ideas, draft content, and refine it to perfection.
+    description: `Influensea simplifies content creation process by leveraging AI to create engaging, high-quality content at scale. You can brainstorm ideas, draft content and refine it to perfection.
 
-Whether you're a blogger, marketer, or social media influencer, Influensea provides all the tools you need to engage your readers and make an impact.
+Whether you're a blogger, marketer or social media influencer, Influensea provides all the tools you need to capture your audience and make an impact.
 
-This is my personal project which I develop on the side. I aim to create a tool which enhances both productivity and creativity.`,
+This is my personal project which I develop on after hours. I aim to create a tool which enhances both productivity and creativity.`,
     image: InfluenseaProject,
     technologies: getTechnologies([
       'TypeScript',

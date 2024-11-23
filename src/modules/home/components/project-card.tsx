@@ -10,7 +10,7 @@ type Props = {
 const ProjectCard = ({
   project: { title, description, technologies, image },
 }: Props) => (
-  <div className="group min-h-[377px] w-[322px] rounded-3xl">
+  <div className="group min-h-[377px] w-full max-w-[521px] rounded-3xl">
     <CardContainer>
       {/* <Image src={image} alt={title} className="mb-4 h-[150px] w-auto" /> */}
       <CardItem translateZ="100" className="h-full w-full">
@@ -35,7 +35,7 @@ const ProjectCard = ({
       </CardItem>
 
       <CardItem translateZ="80">
-        <p className="mt-2 whitespace-pre-wrap text-sm text-foreground">
+        <p className="mt-2 whitespace-pre-wrap text-sm text-muted">
           {description}
         </p>
       </CardItem>
