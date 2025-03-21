@@ -17,9 +17,10 @@ const clientConfig = {
     'Node.js',
   ],
   links: {
-    github: 'https://github.com/lekterable',
-    linkedin: 'https://www.linkedin.com/in/lekterable',
-    youtube: 'https://www.youtube.com/@KornelDubieniecki',
+    footer: 'https://link.kornel.me/footer',
+    github: 'https://link.kornel.me/github',
+    linkedin: 'https://link.kornel.me/linkedin',
+    youtube: 'https://link.kornel.me/youtube',
   },
   name: 'Kornel Dubieniecki',
   ogImage: '/og.jpg',

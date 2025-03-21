@@ -7,9 +7,11 @@ const SiteFooter = (): JSX.Element => (
     <p className="text-center text-sm text-secondary">
       © {new Date().getFullYear()} Made with ❤️ by{' '}
       <a
-        href={clientConfig.links.github}
+        href={clientConfig.links.footer}
+        aria-label="Visit lekterable's portfolio"
+        title="Visit lekterable's portfolio"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
         className="font-medium underline underline-offset-2"
       >
         {clientConfig.author}

@@ -26,22 +26,28 @@ const Me = () => (
     <div className="mb-[29px] mt-[21px] flex items-center gap-[18px] md:gap-[21px]">
       <a
         href={clientConfig.links.github}
+        aria-label="Visit Kornel Dubieniecki's portfolio"
+        title="Visit Kornel Dubieniecki's portfolio"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         <Github className="w-[34px] hover:text-accent md:w-[47px]" />
       </a>
       <a
         href={clientConfig.links.linkedin}
+        aria-label="Visit Kornel Dubieniecki's LinkedIn"
+        title="Visit Kornel Dubieniecki's LinkedIn"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         <LinkedIn className="w-[34px] hover:text-accent md:w-[47px]" />
       </a>
       <a
         href={clientConfig.links.youtube}
+        aria-label="Visit Kornel Dubieniecki's YouTube"
+        title="Visit Kornel Dubieniecki's YouTube"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         <Youtube className="w-[34px] hover:text-accent md:w-[47px]" />
       </a>

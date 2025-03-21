@@ -34,8 +34,8 @@
 
     --radius: 0.5rem;
 
-    --selection-background: #b3d4fc; /* Light mode selection background */
-    --selection-foreground: #000000; /* Light mode selection foreground */
+    --selection-background: #b3d4fc;
+    --selection-foreground: #000000;
   }
 
   /* .dark {
