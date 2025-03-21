@@ -3,9 +3,7 @@
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { type ThemeProviderProps } from 'next-themes'
 
-type Props = ThemeProviderProps
-
-const ThemeProvider = ({ children, ...props }: Props): JSX.Element => (
+const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => (
   <NextThemesProvider {...props}>{children}</NextThemesProvider>
 )
 

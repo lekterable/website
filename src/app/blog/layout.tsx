@@ -1,8 +1,6 @@
 import type { PropsWithChildren } from 'react'
 
-type Props = PropsWithChildren<unknown>
-
-const BlogLayout = ({ children }: Props): JSX.Element => (
+const BlogLayout = ({ children }: PropsWithChildren) => (
   <div className="mt-[123px]">{children}</div>
 )
 

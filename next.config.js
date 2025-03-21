@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: { serverActions: true },
   images: {
     domains: ['demo.ghost.io', 'static.ghost.org', 'www.gravatar.com'],
   },

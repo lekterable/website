@@ -60,9 +60,11 @@ const technologies: Technology[] = [
 
 const getTechnologies = (names: Array<Technology['name']>): Technology[] => {
   const returned = names.reduce<Technology[]>((acc, name) => {
-    const tech = technologies.find((tech) => tech.name === name) as Technology
+    const tech = technologies.find((tech) => tech.name === name)
 
-    acc.push(tech)
+    if (tech) {
+      acc.push(tech)
+    }
 
     return acc
   }, [])

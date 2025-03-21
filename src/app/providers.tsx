@@ -6,8 +6,8 @@ import type { PropsWithChildren } from 'react'
 import ThemeProviderBase from '~components/theme-provider'
 
 if (typeof window !== 'undefined') {
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST as string,
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as unknown as string, {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST as unknown as string,
   })
 }
 
