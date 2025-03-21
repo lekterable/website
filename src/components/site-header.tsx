@@ -2,7 +2,7 @@ import FloatingNav from './floating-nav'
 import TopNav from './top-nav'
 // import ThemeToggle from './theme-toggle'
 
-const SiteHeader = (): JSX.Element => (
+const SiteHeader = () => (
   <header>
     <TopNav />
     <FloatingNav />

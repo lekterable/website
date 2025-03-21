@@ -12,7 +12,7 @@ import LogoIMG from '~assets/logo.png'
 import { Button } from '~components/ui/button'
 import clientConfig from '~config/client'
 
-const MobileNav = (): JSX.Element => {
+const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const onOpen = () => setIsOpen(true)

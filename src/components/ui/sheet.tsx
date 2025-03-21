@@ -17,9 +17,7 @@ const SheetTrigger = SheetPrimitive.Trigger
 
 const SheetClose = SheetPrimitive.Close
 
-const SheetPortal = ({
-  ...props
-}: SheetPrimitive.DialogPortalProps): JSX.Element => (
+const SheetPortal = ({ ...props }: SheetPrimitive.DialogPortalProps) => (
   <SheetPrimitive.Portal {...props} />
 )
 SheetPortal.displayName = SheetPrimitive.Portal.displayName
@@ -88,7 +86,7 @@ SheetContent.displayName = SheetPrimitive.Content.displayName
 const SheetHeader = ({
   className,
   ...props
-}: HTMLAttributes<HTMLDivElement>): JSX.Element => (
+}: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
       'flex flex-col space-y-2 text-center sm:text-left',
@@ -102,7 +100,7 @@ SheetHeader.displayName = 'SheetHeader'
 const SheetFooter = ({
   className,
   ...props
-}: HTMLAttributes<HTMLDivElement>): JSX.Element => (
+}: HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',

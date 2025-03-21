@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from '~components/ui/dropdown-menu'
 
-const ThemeToggle = (): JSX.Element => {
+const ThemeToggle = () => {
   const { setTheme } = useTheme()
 
   return (

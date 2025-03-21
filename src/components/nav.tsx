@@ -36,7 +36,7 @@ type Props = {
   onLink?: () => void
 } & React.HTMLAttributes<HTMLDivElement>
 
-const Nav = ({ onLink, className, ...props }: Props): JSX.Element => {
+const Nav = ({ onLink, className, ...props }: Props) => {
   const { links } = useNav()
 
   return (

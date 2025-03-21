@@ -58,7 +58,7 @@ module.exports = {
         ],
       },
     ],
-    'no-console': 'error',
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-extra-boolean-cast': 'off',
     'no-restricted-imports': [
       'error',

@@ -13,13 +13,7 @@ type Props = {
   className?: string
 } & Omit<ScrollLinkProps, 'ref' | 'to'>
 
-const Link = ({
-  href,
-  onClick,
-  className,
-  children,
-  ...props
-}: Props): JSX.Element => {
+const Link = ({ href, onClick, className, children, ...props }: Props) => {
   const router = useRouter()
 
   const isHashLink = href.startsWith('#')

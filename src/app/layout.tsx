@@ -1,7 +1,5 @@
-/* eslint-disable @next/next/no-page-custom-font */
-
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import type { PropsWithChildren } from 'react'
 import { Analytics, SiteFooter, SiteHeader } from '~components'
 import fonts from './fonts'
@@ -38,12 +36,14 @@ export const metadata: Metadata = {
     images: [clientConfig.ogImage],
     title: clientConfig.name,
   },
-  viewport: 'width=device-width, initial-scale=1',
 }
 
-type Props = PropsWithChildren<unknown>
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: 'device-width',
+}
 
-const RootLayout = ({ children }: Props): JSX.Element => (
+const RootLayout = ({ children }: PropsWithChildren) => (
   <html lang="en" suppressHydrationWarning>
     <body className={fonts}>
       <Providers>
@@ -52,8 +52,8 @@ const RootLayout = ({ children }: Props): JSX.Element => (
           <main>{children}</main>
           <SiteFooter />
         </div>
+        {clientConfig.env === 'production' && <Analytics />}
       </Providers>
-      {clientConfig.env === 'production' && <Analytics />}
     </body>
   </html>
 )

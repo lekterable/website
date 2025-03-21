@@ -8,8 +8,8 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }))
 }
 
-const Post = async ({ params }: { params: { slug: string } }) => {
-  const post = await getPost(params.slug)
+const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const post = await getPost((await params).slug)
 
   return (
     <section className="bg-background px-8 pb-24">

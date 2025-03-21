@@ -8,7 +8,7 @@ import Nav from './nav'
 import useScrollStatus from '~hooks/use-scroll-status'
 // import ThemeToggle from './theme-toggle'
 
-const TopNav = (): JSX.Element => {
+const TopNav = () => {
   const { isScrollingUp } = useScrollStatus()
   const [isVisible, setIsVisible] = useState(true)
   const navRef = useRef<HTMLDivElement>(null)
